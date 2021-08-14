@@ -1,4 +1,5 @@
 {% load static %}
+{% static "images" as baseurl %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -158,7 +159,7 @@
             </div>
             <div class="col-md-4 col-sm-6 col-xs-12">
                 <div class="full news_blog">
-                    <img class="img-responsive" src="{% static 'images/b2.jpg' %}" alt="#" height=300 />
+                    <img class="img-responsive" src="{% static 'images/b2.jpg' %}" alt=" " height=300 />
                     <div class="overlay"><a class="main_bt transparent" href="#">View</a></div>
                    <div class="blog_details">
                      <h3>Ajmer</h3>
@@ -166,16 +167,20 @@
                    </div>
                 </div>
             </div>
+            {% for city in citys%}
             <div class="col-md-4 col-sm-6 col-xs-12">
-                <div class="full news_blog">
-                    <img class="img-responsive" src="{% static 'images/b3.jpg' %}" alt="#" height=300 />
-                    <div class="overlay"><a class="main_bt transparent" href="#">View</a></div>
-                   <div class="blog_details">
-                     <h3>Jodhpur</h3>
-                     <p>Jodhpur is a city in the Thar Desert of the northwest Indian state of Rajasthan. Also called as "Blue city" or "Sun city" of India.</p>
-                   </div>
-                </div>
-            </div>
+              <div class="full news_blog">
+                  <img class="img-responsive" src="{{city.media.url}}" alt="this is" height=300 />
+                  <div class="overlay"><a class="main_bt transparent" href="#">View</a></div>
+                 <div class="blog_details">
+                   <h3>{{city.name}}</h3>
+                   <p>{{city.des}}</p>
+                 </div>
+              </div>
+          </div>
+          {% endfor%}
+         
+           
          </div>
     </div>
 </div>
