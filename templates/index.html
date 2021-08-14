@@ -1,5 +1,4 @@
 {% load static %}
-{% static "images" as baseurl %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -170,11 +169,11 @@
             {% for city in citys%}
             <div class="col-md-4 col-sm-6 col-xs-12">
               <div class="full news_blog">
-                  <img class="img-responsive" src="{{city.media.url}}" alt="this is" height=300 />
+                  <img class="img-responsive" src="{{city.image.url}}" alt="##" height=300 />
                   <div class="overlay"><a class="main_bt transparent" href="#">View</a></div>
                  <div class="blog_details">
                    <h3>{{city.name}}</h3>
-                   <p>{{city.des}}</p>
+                   <p>{{city.desc}}</p>
                  </div>
               </div>
           </div>
