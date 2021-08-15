@@ -166,14 +166,14 @@
                    </div>
                 </div>
             </div>
-            {% for city in citys%}
+            {% for x in citys%}
             <div class="col-md-4 col-sm-6 col-xs-12">
               <div class="full news_blog">
-                  <img class="img-responsive" src="{{city.image.url}}" alt="##" height=300 />
+                  <img class="img-responsive" src="{{x.image.url}}" alt="##" height=300 />
                   <div class="overlay"><a class="main_bt transparent" href="#">View</a></div>
                  <div class="blog_details">
-                   <h3>{{city.name}}</h3>
-                   <p>{{city.desc}}</p>
+                   <h3>{{x.name}}</h3>
+                   <p>{{x.desc}}</p>
                  </div>
               </div>
           </div>
